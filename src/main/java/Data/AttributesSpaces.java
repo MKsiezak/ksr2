@@ -59,4 +59,51 @@ public class AttributesSpaces {
         }
     }
 
+    public List<Player> getListOfPlayers() {
+        return listOfPlayers;
+    }
+
+    public List<Double> getListOfAges() {
+        return listOfAges;
+    }
+
+    public List<Double> getListOfHeights() {
+        return listOfHeights;
+    }
+
+    public List<Double> getListOfWeights() {
+        return listOfWeights;
+    }
+
+    public List<Double> getListOfOveralls() {
+        return listOfOveralls;
+    }
+
+    public List<Double> getListOfValues() {
+        return listOfValues;
+    }
+
+    public List<Double> getListOfPace() {
+        return listOfPace;
+    }
+
+    public List<Double> getListOfShooting() {
+        return listOfShooting;
+    }
+
+    public List<Double> getListOfPassing() {
+        return listOfPassing;
+    }
+
+    public List<Double> getListOfDribbling() {
+        return listOfDribbling;
+    }
+
+    public List<Double> getListOfDefending() {
+        return listOfDefending;
+    }
+
+    public List<Double> getListOfPhysic() {
+        return listOfPhysic;
+    }
 }
