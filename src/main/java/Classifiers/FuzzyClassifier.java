@@ -49,6 +49,14 @@ public class FuzzyClassifier {
         }
     }
 
+    public String getFeatureName() {
+        return featureName;
+    }
+
+    public void setFeatureName(String featureName) {
+        this.featureName = featureName;
+    }
+
     //tworzy zbior rozmyty dla danej etykiety ktora musi byc w affilation
     public FuzzySet createSet (String label){
         try {
@@ -70,7 +78,9 @@ public class FuzzyClassifier {
                     }
             }
 
-            return new FuzzySet(playerList,label);
+
+
+            return new FuzzySet(playerList,label, allPlayers.getListOfPlayers().size());
         }
         catch (Exception e){
             System.out.println(e);

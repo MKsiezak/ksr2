@@ -9,6 +9,8 @@ import java.beans.PropertyDescriptor;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
+import java.util.stream.IntStream;
 
 
 public class FuzzySet {
@@ -27,10 +29,12 @@ public class FuzzySet {
     //dalsze podpunkty?
     protected List<Membership> playersWithMembershipValue;
     protected String labelName;
+    protected int number_of_all_players;
 
-    public FuzzySet(List<Membership> playersWithMembershipValue, String labelName) {
+    public FuzzySet(List<Membership> playersWithMembershipValue, String labelName, int number_of_all_players) {
         this.playersWithMembershipValue = playersWithMembershipValue;
         this.labelName = labelName;
+        this.number_of_all_players= number_of_all_players;
     }
 
     public List<Membership> getPlayersWithMembershipValue() {
@@ -40,6 +44,10 @@ public class FuzzySet {
 
     public String getLabelName() {
         return labelName;
+    }
+
+    public int getNumber_of_all_players() {
+        return number_of_all_players;
     }
 
     public void setLabelName(String labelName) {
@@ -79,17 +87,115 @@ public class FuzzySet {
         return playerList;
     }
 
-
-    public List<Membership> sumFuzzySets(FuzzySet second){
+    // przyjmuje drugi zbior rozmyty
+    public FuzzySet sumFuzzySets(FuzzySet second){
         List<Membership> playerList = new ArrayList<Membership>();
 
         for (int i=0 ; i<playersWithMembershipValue.size(); i++)
         {
+            if (isPresent(second.getPlayersWithMembershipValue(),playersWithMembershipValue.get(i).getPlayer().getId())) {    //System.out.println(second.getPlayersWithMembershipValue().stream().filter(o -> o.getPlayer().getName().equals(playersWithMembershipValue.get(i).getPlayer().getName())).findFirst().get());
+                int indeksik = indexOfPlayer(second.getPlayersWithMembershipValue(), playersWithMembershipValue.get(i).getPlayer().getId());
+                playerList.add(new Membership(playersWithMembershipValue.get(i).getPlayer(),Math.max(playersWithMembershipValue.get(i).getMembershipValue(),second.getPlayersWithMembershipValue().get(indeksik).getMembershipValue())));
+            }
+            else{
+                playerList.add(playersWithMembershipValue.get(i));
+            }
+        }
+
+        for (int i=0; i<second.getPlayersWithMembershipValue().size() ; i++)
+        {
+            if (isPresent(playersWithMembershipValue,second.getPlayersWithMembershipValue().get(i).getPlayer().getId())) {    //System.out.println(second.getPlayersWithMembershipValue().stream().filter(o -> o.getPlayer().getName().equals(playersWithMembershipValue.get(i).getPlayer().getName())).findFirst().get());
+                continue;
+            }
+            else{
+                playerList.add(second.getPlayersWithMembershipValue().get(i));
+            }
 
         }
-           // playerList.add(new Membership(playersWithMembershipValue.get(i).getPlayer(), 1-  playersWithMembershipValue.get(i).getMembershipValue()));
-        return null;
+        FuzzySet sumSet = new FuzzySet(playerList,labelName+ " sum "+second.getLabelName(),number_of_all_players);
+
+
+        return sumSet;
         }
+
+        //przeciecie - czesc wspolna zbiorow rozmytych
+    public FuzzySet intersectionFuzzySets(FuzzySet second){
+        List<Membership> playerList = new ArrayList<Membership>();
+
+        for (int i=0 ; i<playersWithMembershipValue.size(); i++)
+        {
+            if (isPresent(second.getPlayersWithMembershipValue(),playersWithMembershipValue.get(i).getPlayer().getId())) {    //System.out.println(second.getPlayersWithMembershipValue().stream().filter(o -> o.getPlayer().getName().equals(playersWithMembershipValue.get(i).getPlayer().getName())).findFirst().get());
+                int indeksik = indexOfPlayer(second.getPlayersWithMembershipValue(), playersWithMembershipValue.get(i).getPlayer().getId());
+                playerList.add(new Membership(playersWithMembershipValue.get(i).getPlayer(),Math.min(playersWithMembershipValue.get(i).getMembershipValue(),second.getPlayersWithMembershipValue().get(indeksik).getMembershipValue())));
+            }
+            else{
+                playerList.add(new Membership(playersWithMembershipValue.get(i).getPlayer(),0));
+            }
+        }
+
+        for (int i=0; i<second.getPlayersWithMembershipValue().size() ; i++)
+        {
+            if (isPresent(playersWithMembershipValue,second.getPlayersWithMembershipValue().get(i).getPlayer().getId())) {    //System.out.println(second.getPlayersWithMembershipValue().stream().filter(o -> o.getPlayer().getName().equals(playersWithMembershipValue.get(i).getPlayer().getName())).findFirst().get());
+                continue;
+            }
+            else{
+                playerList.add(new Membership(second.getPlayersWithMembershipValue().get(i).getPlayer(),0));
+            }
+
+        }
+        FuzzySet sumSet = new FuzzySet(playerList,labelName+ " and "+second.getLabelName(),playersWithMembershipValue.size());
+
+
+        return sumSet;
+    }
+
+    //nosnik
+    public List<Membership> supp(){
+        List<Membership> playerList = new ArrayList<Membership>();
+
+        for (int i=0 ; i<playersWithMembershipValue.size(); i++)
+        {
+            if (playersWithMembershipValue.get(i).getMembershipValue()>0) {
+
+                playerList.add(playersWithMembershipValue.get(i));
+            }
+
+
+        }
+        return playerList;
+    }
+
+    //alfa przekrój
+    public List<Membership> section(double a){
+        List<Membership> playerList = new ArrayList<Membership>();
+
+        for (int i=0 ; i<playersWithMembershipValue.size(); i++)
+        {
+            if (playersWithMembershipValue.get(i).getMembershipValue()>a) {
+
+                playerList.add(playersWithMembershipValue.get(i));
+            }
+
+
+        }
+        return playerList;
+    }
+
+
+
+    public boolean isPresent(final List<Membership> list, final int id){
+        return list.stream().filter(o -> o.getPlayer().getId()==id).findFirst().isPresent();
+    }
+
+    public int indexOfPlayer(final List<Membership> list, final int id){
+
+
+        return list.indexOf(list.stream().filter(o -> o.getPlayer().getId()==id).findFirst().get());
+
+    }
+
+
+
 
     }
 

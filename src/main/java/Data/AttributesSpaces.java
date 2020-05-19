@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class AttributesSpaces {
-    private List<Player> listOfPlayers;
+   final private List<Player> listOfPlayers;
 
     private List<Double> listOfAges;
     private List<Double> listOfHeights;
