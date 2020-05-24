@@ -15,7 +15,7 @@ public class SecondSummary {
         FuzzySet zbior2 = allClassifiers.findClassifier(secondFeature).createSet(secondLabel);
         FuzzySet wypadkowy = zbior.intersectionFuzzySets(zbior2);
         String quantifier= Quantifier.quantifies(wypadkowy.supp().size(),wypadkowy.getNumber_of_all_players() ,relative);
-        String summary = quantifier+ " z zawodników  " + labelName + " jest " + secondLabel ;
+        String summary = quantifier+ " of " + labelName +" "+ featureName + " players have " + secondLabel+ " "+secondFeature ;
         return summary;
 
 

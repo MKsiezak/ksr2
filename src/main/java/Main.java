@@ -4,6 +4,7 @@ import Classifiers.ClassifiersContainer;
 import Classifiers.FuzzyClassifier;
 import Data.AttributesSpaces;
 import Data.ReadData;
+import GUI.MyFrame;
 import Quantifiers.Quantifier;
 import Sets.FuzzySet;
 import Summaries.FirstSummary;
@@ -11,16 +12,19 @@ import Summaries.SecondSummary;
 import com.fuzzylite.Engine;
 import com.fuzzylite.variable.InputVariable;
 
+import java.awt.*;
+
 public class Main {
     public static void main(String[] args) {
         try {
 
-            //szukac po id a nie po nazwiskach !!!!!!sa takie same niektore
+
+
             ClassifiersContainer allClassifiers =new ClassifiersContainer();
             ClassifierInitialize.initialize(allClassifiers);
 
-            String sumary = FirstSummary.generateSummary(allClassifiers,"pace","weak",true);
-            String summary2 = SecondSummary.generateSummary(allClassifiers,"physic","good","pace","weak");
+            //String sumary = FirstSummary.generateSummary(allClassifiers,"pace","average",true);
+            String summary2 = SecondSummary.generateSummary(allClassifiers,"age","young","age","middle-aged");
 
 
             /*

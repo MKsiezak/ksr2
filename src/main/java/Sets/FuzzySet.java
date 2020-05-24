@@ -29,12 +29,18 @@ public class FuzzySet {
     //dalsze podpunkty?
     protected List<Membership> playersWithMembershipValue;
     protected String labelName;
+    protected String featureName;
     protected int number_of_all_players;
 
-    public FuzzySet(List<Membership> playersWithMembershipValue, String labelName, int number_of_all_players) {
+    public FuzzySet(List<Membership> playersWithMembershipValue, String labelName,String featureName, int number_of_all_players) {
         this.playersWithMembershipValue = playersWithMembershipValue;
         this.labelName = labelName;
+        this.featureName = featureName;
         this.number_of_all_players= number_of_all_players;
+    }
+
+    public String getFeatureName() {
+        return featureName;
     }
 
     public List<Membership> getPlayersWithMembershipValue() {
@@ -112,7 +118,7 @@ public class FuzzySet {
             }
 
         }
-        FuzzySet sumSet = new FuzzySet(playerList,labelName+ " sum "+second.getLabelName(),number_of_all_players);
+        FuzzySet sumSet = new FuzzySet(playerList,labelName+ " sum "+second.getLabelName(),featureName,number_of_all_players);
 
 
         return sumSet;
@@ -124,6 +130,7 @@ public class FuzzySet {
 
         for (int i=0 ; i<playersWithMembershipValue.size(); i++)
         {
+
             if (isPresent(second.getPlayersWithMembershipValue(),playersWithMembershipValue.get(i).getPlayer().getId())) {    //System.out.println(second.getPlayersWithMembershipValue().stream().filter(o -> o.getPlayer().getName().equals(playersWithMembershipValue.get(i).getPlayer().getName())).findFirst().get());
                 int indeksik = indexOfPlayer(second.getPlayersWithMembershipValue(), playersWithMembershipValue.get(i).getPlayer().getId());
                 playerList.add(new Membership(playersWithMembershipValue.get(i).getPlayer(),Math.min(playersWithMembershipValue.get(i).getMembershipValue(),second.getPlayersWithMembershipValue().get(indeksik).getMembershipValue())));
@@ -143,7 +150,7 @@ public class FuzzySet {
             }
 
         }
-        FuzzySet sumSet = new FuzzySet(playerList,labelName+ " and "+second.getLabelName(),playersWithMembershipValue.size());
+        FuzzySet sumSet = new FuzzySet(playerList,labelName+ " and "+second.getLabelName(),featureName,playersWithMembershipValue.size());
 
 
         return sumSet;
@@ -193,6 +200,28 @@ public class FuzzySet {
         return list.indexOf(list.stream().filter(o -> o.getPlayer().getId()==id).findFirst().get());
 
     }
+
+
+
+    //przeciecie - czesc wspolna zbiorow rozmytych
+    public FuzzySet intersectionFuzzySetsWithoutZero(FuzzySet second){
+        List<Membership> playerList = new ArrayList<Membership>();
+
+        for (int i=0 ; i<playersWithMembershipValue.size(); i++)
+        {
+
+            if (isPresent(second.getPlayersWithMembershipValue(),playersWithMembershipValue.get(i).getPlayer().getId())) {    //System.out.println(second.getPlayersWithMembershipValue().stream().filter(o -> o.getPlayer().getName().equals(playersWithMembershipValue.get(i).getPlayer().getName())).findFirst().get());
+                int indeksik = indexOfPlayer(second.getPlayersWithMembershipValue(), playersWithMembershipValue.get(i).getPlayer().getId());
+                playerList.add(new Membership(playersWithMembershipValue.get(i).getPlayer(),Math.min(playersWithMembershipValue.get(i).getMembershipValue(),second.getPlayersWithMembershipValue().get(indeksik).getMembershipValue())));
+            }
+
+        }
+        FuzzySet sumSet = new FuzzySet(playerList,labelName+ " and "+second.getLabelName(),featureName,playersWithMembershipValue.size());
+
+
+        return sumSet;
+    }
+
 
 
 

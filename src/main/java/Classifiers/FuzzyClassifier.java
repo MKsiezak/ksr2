@@ -49,6 +49,10 @@ public class FuzzyClassifier {
         }
     }
 
+    public AttributesSpaces getAllPlayers() {
+        return allPlayers;
+    }
+
     public String getFeatureName() {
         return featureName;
     }
@@ -64,6 +68,18 @@ public class FuzzyClassifier {
             MembershipAndLabel labelNameAndValue;
             List<Membership> playerList = new ArrayList<Membership>();
 
+            /*
+            if (label=="young") {
+                playerList.add(new Membership(allPlayers.getListOfPlayers().get(1), 1));
+                playerList.add(new Membership(allPlayers.getListOfPlayers().get(2), 1));
+                playerList.add(new Membership(allPlayers.getListOfPlayers().get(3), 1));
+            }
+            if (label=="middle-aged") {
+                playerList.add(new Membership(allPlayers.getListOfPlayers().get(2), 1));
+                playerList.add(new Membership(allPlayers.getListOfPlayers().get(3), 1));
+                playerList.add(new Membership(allPlayers.getListOfPlayers().get(4), 1));
+            }
+            */
 
             PropertyDescriptor pd = new PropertyDescriptor(featureName, Player.class);
             Method getter = pd.getReadMethod();
@@ -78,9 +94,7 @@ public class FuzzyClassifier {
                     }
             }
 
-
-
-            return new FuzzySet(playerList,label, allPlayers.getListOfPlayers().size());
+            return new FuzzySet(playerList,label,featureName, allPlayers.getListOfPlayers().size());
         }
         catch (Exception e){
             System.out.println(e);
