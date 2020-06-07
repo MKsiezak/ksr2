@@ -12,6 +12,8 @@ public class TriangularFuzzyFunction implements AffilationFunction {
         this.label = label;
     }
 
+
+
     public double getA() {
         return a;
     }
@@ -40,9 +42,21 @@ public class TriangularFuzzyFunction implements AffilationFunction {
         return label;
     }
 
+    @Override
     public void setLabel(String label) {
-        this.label = label;
+        this.label=label;
     }
+
+    @Override
+    public double getFirst() {
+        return a;
+    }
+
+    @Override
+    public double getLast() {
+        return c;
+    }
+
 
     @Override
     public double countMembership(double x) {

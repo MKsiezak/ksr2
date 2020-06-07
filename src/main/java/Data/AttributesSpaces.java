@@ -1,7 +1,11 @@
 package Data;
 
+import java.beans.IntrospectionException;
+import java.beans.PropertyDescriptor;
 import java.io.IOException;
+import java.lang.reflect.Method;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class AttributesSpaces {
@@ -105,5 +109,66 @@ public class AttributesSpaces {
 
     public List<Double> getListOfPhysic() {
         return listOfPhysic;
+    }
+
+    public double getRangeFor(String featureName){
+        if (featureName.equals("age"))
+        {
+            Collections.sort(listOfAges);
+            return (double)listOfAges.get(listOfAges.size()-1)-listOfAges.get(0);
+        }
+        if (featureName.equals("height"))
+        {
+            Collections.sort(listOfHeights);
+            return (double)listOfHeights.get(listOfHeights.size()-1)-listOfHeights.get(0);
+        }
+        if (featureName.equals("weight"))
+        {
+            Collections.sort(listOfWeights);
+            return (double)listOfWeights.get(listOfWeights.size()-1)-listOfWeights.get(0);
+        }
+        if (featureName.equals("value_eur"))
+        {
+            Collections.sort(listOfValues);
+            return (double)listOfValues.get(listOfValues.size()-1)-listOfValues.get(0);
+        }
+        if (featureName.equals("pace"))
+        {
+            Collections.sort(listOfPace);
+            return (double)listOfPace.get(listOfPace.size()-1)-listOfPace.get(0);
+        }
+        if (featureName.equals("shooting"))
+        {
+            Collections.sort(listOfShooting);
+            return (double)listOfShooting.get(listOfShooting.size()-1)-listOfShooting.get(0);
+        }
+        if (featureName.equals("passing"))
+        {
+            Collections.sort(listOfPassing);
+            return (double)listOfPassing.get(listOfPassing.size()-1)-listOfPassing.get(0);
+        }
+        if (featureName.equals("dribbling"))
+        {
+            Collections.sort(listOfDribbling);
+            return (double)listOfDribbling.get(listOfDribbling.size()-1)-listOfDribbling.get(0);
+        }
+        if (featureName.equals("defending"))
+        {
+            Collections.sort(listOfDefending);
+            return (double)listOfDefending.get(listOfDefending.size()-1)-listOfDefending.get(0);
+        }
+        if (featureName.equals("physic"))
+        {
+            Collections.sort(listOfPhysic);
+            return (double)listOfPhysic.get(listOfPhysic.size()-1)-listOfPhysic.get(0);
+        }
+        if (featureName.equals("overall"))
+        {
+            Collections.sort(listOfOveralls);
+            return (double)listOfOveralls.get(listOfOveralls.size()-1)-listOfOveralls.get(0);
+        }
+
+
+    return 2137;
     }
 }

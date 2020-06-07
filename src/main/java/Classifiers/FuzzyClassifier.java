@@ -38,6 +38,10 @@ public class FuzzyClassifier {
         this.affilation=new ArrayList<AffilationFunction>();
     }
 
+    public List<AffilationFunction> getAffilation() {
+        return affilation;
+    }
+
     public boolean addAffilationFunction(AffilationFunction function){
         try {
             affilation.add(function);
@@ -46,6 +50,20 @@ public class FuzzyClassifier {
         catch ( Exception e){
             System.out.println(e);
             return false;
+        }
+    }
+
+    public AffilationFunction findAffilation(String labelName) {
+        try {
+            for (int i =0 ; i< affilation.size();i++)
+            {
+                if (affilation.get(i).getLabel().equals(labelName))
+                    return affilation.get(i);
+            }
+            return null;
+        } catch (Exception e) {
+            System.out.println(e);
+            return null;
         }
     }
 

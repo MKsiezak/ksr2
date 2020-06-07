@@ -15,6 +15,8 @@ public class TrapezoidalFuzzyFunction implements AffilationFunction {
         this.label = label;
     }
 
+
+
     public double getA() {
         return a;
     }
@@ -43,6 +45,21 @@ public class TrapezoidalFuzzyFunction implements AffilationFunction {
         return label;
     }
 
+    @Override
+    public void setLabel(String label) {
+        this.label=label;
+    }
+
+    @Override
+    public double getFirst() {
+        return a;
+    }
+
+    @Override
+    public double getLast() {
+        return d;
+    }
+
     public double getD() {
         return d;
     }
@@ -51,9 +68,7 @@ public class TrapezoidalFuzzyFunction implements AffilationFunction {
         this.d = d;
     }
 
-    public void setLabel(String label) {
-        this.label = label;
-    }
+
 
     @Override
     public double countMembership(double x) {
