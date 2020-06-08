@@ -97,6 +97,50 @@ public class MyGui {
     private JCheckBox middleRight;
     private JCheckBox oldRight;
     private JPanel rightAgeFeatures;
+    private JCheckBox heightRight;
+    private JCheckBox shortRight;
+    private JCheckBox mediumRight;
+    private JCheckBox tallRight;
+    private JCheckBox weightRight;
+    private JCheckBox lowWeightRight;
+    private JCheckBox averageWeightRight;
+    private JCheckBox heavyWeightRight;
+    private JCheckBox obeseWeightRight;
+    private JCheckBox overallRight;
+    private JCheckBox weakOverallRight;
+    private JCheckBox averageOverallRight;
+    private JCheckBox goodOverallRight;
+    private JCheckBox value_eurRight;
+    private JCheckBox cheapRight;
+    private JCheckBox moderateRight;
+    private JCheckBox highRight;
+    private JCheckBox paceRight;
+    private JCheckBox weakPaceRight;
+    private JCheckBox averagePaceRight;
+    private JCheckBox goodPaceRight;
+    private JCheckBox physicRight;
+    private JCheckBox weakPhysicRight;
+    private JCheckBox averagePhysicRight;
+    private JCheckBox goodPhysicRight;
+    private JCheckBox defendingRight;
+    private JCheckBox weakDefendingRight;
+    private JCheckBox averageDefendingRight;
+    private JCheckBox goodDefendingRight;
+    private JCheckBox dribblingRight;
+    private JCheckBox weakDribblingRight;
+    private JCheckBox averageDribblingRight;
+    private JCheckBox goodDribblingRight;
+    private JCheckBox passingRight;
+    private JCheckBox weakPassingRight;
+    private JCheckBox averagePassingRight;
+    private JCheckBox goodPassingRight;
+    private JCheckBox shootingRight;
+    private JCheckBox weakShootingRight;
+    private JCheckBox averageShootingRight;
+    private JCheckBox goodShootingRight;
+    private JCheckBox amazingOverallRight;
+    private JPanel leftHeightFeatures;
+    private JPanel rightHeightFeatures;
     private JScrollBar skrol;
 
     private List<FuzzySet> jednopodmiote;
@@ -297,6 +341,138 @@ public class MyGui {
                     }
                 }
 
+                if (heightRight.isSelected()) {
+                    if (shortRight.isSelected()) {
+                        wielopodmiotowe.add(allClassifiers.findClassifier("height").createSet(allClassifiers.findClassifier("height").getAffilation().get(0).getLabel()));
+                    }
+                    if (mediumRight.isSelected()) {
+                        wielopodmiotowe.add(allClassifiers.findClassifier("height").createSet(allClassifiers.findClassifier("height").getAffilation().get(1).getLabel()));
+                    }
+                    if (tallRight.isSelected()) {
+                        wielopodmiotowe.add(allClassifiers.findClassifier("height").createSet(allClassifiers.findClassifier("height").getAffilation().get(2).getLabel()));
+                    }
+                }
+
+                if (weightRight.isSelected()) {
+                    if (lowWeightRight.isSelected()) {
+                        wielopodmiotowe.add(allClassifiers.findClassifier("weight").createSet(allClassifiers.findClassifier("weight").getAffilation().get(0).getLabel()));
+                    }
+                    if (averageWeightRight.isSelected()) {
+                        wielopodmiotowe.add(allClassifiers.findClassifier("weight").createSet(allClassifiers.findClassifier("weight").getAffilation().get(1).getLabel()));
+                    }
+                    if (heavyWeightRight.isSelected()) {
+                        wielopodmiotowe.add(allClassifiers.findClassifier("weight").createSet(allClassifiers.findClassifier("weight").getAffilation().get(2).getLabel()));
+                    }
+                    if (obeseWeightRight.isSelected()) {
+                        wielopodmiotowe.add(allClassifiers.findClassifier("weight").createSet(allClassifiers.findClassifier("weight").getAffilation().get(3).getLabel()));
+                    }
+                }
+
+                if (overallRight.isSelected()) {
+                    if (weakOverallRight.isSelected()) {
+                        wielopodmiotowe.add(allClassifiers.findClassifier("overall").createSet(allClassifiers.findClassifier("overall").getAffilation().get(0).getLabel()));
+                    }
+                    if (averageOverallRight.isSelected()) {
+                        wielopodmiotowe.add(allClassifiers.findClassifier("overall").createSet(allClassifiers.findClassifier("overall").getAffilation().get(1).getLabel()));
+                    }
+                    if (goodOverallRight.isSelected()) {
+                        wielopodmiotowe.add(allClassifiers.findClassifier("overall").createSet(allClassifiers.findClassifier("overall").getAffilation().get(2).getLabel()));
+                    }
+                    if (amazingOverallRight.isSelected()) {
+                        wielopodmiotowe.add(allClassifiers.findClassifier("overall").createSet(allClassifiers.findClassifier("overall").getAffilation().get(3).getLabel()));
+                    }
+                }
+
+                if (value_eurRight.isSelected()) {
+                    if (cheapRight.isSelected()) {
+                        wielopodmiotowe.add(allClassifiers.findClassifier("value_eur").createSet(allClassifiers.findClassifier("value_eur").getAffilation().get(0).getLabel()));
+                    }
+                    if (moderateRight.isSelected()) {
+                        wielopodmiotowe.add(allClassifiers.findClassifier("value_eur").createSet(allClassifiers.findClassifier("value_eur").getAffilation().get(1).getLabel()));
+                    }
+                    if (highRight.isSelected()) {
+                        wielopodmiotowe.add(allClassifiers.findClassifier("value_eur").createSet(allClassifiers.findClassifier("value_eur").getAffilation().get(2).getLabel()));
+                    }
+                }
+
+                if (paceRight.isSelected()) {
+                    if (weakPaceRight.isSelected()) {
+                        wielopodmiotowe.add(allClassifiers.findClassifier("pace").createSet(allClassifiers.findClassifier("pace").getAffilation().get(0).getLabel()));
+                    }
+                    if (averagePaceRight.isSelected()) {
+                        wielopodmiotowe.add(allClassifiers.findClassifier("pace").createSet(allClassifiers.findClassifier("pace").getAffilation().get(1).getLabel()));
+                    }
+                    if (goodPaceRight.isSelected()) {
+                        wielopodmiotowe.add(allClassifiers.findClassifier("pace").createSet(allClassifiers.findClassifier("pace").getAffilation().get(2).getLabel()));
+                    }
+
+                }
+
+                if (shootingRight.isSelected()) {
+                    if (weakShootingRight.isSelected()) {
+                        wielopodmiotowe.add(allClassifiers.findClassifier("shooting").createSet(allClassifiers.findClassifier("shooting").getAffilation().get(0).getLabel()));
+                    }
+                    if (averageShootingRight.isSelected()) {
+                        wielopodmiotowe.add(allClassifiers.findClassifier("shooting").createSet(allClassifiers.findClassifier("shooting").getAffilation().get(1).getLabel()));
+                    }
+                    if (goodShootingRight.isSelected()) {
+                        wielopodmiotowe.add(allClassifiers.findClassifier("shooting").createSet(allClassifiers.findClassifier("shooting").getAffilation().get(2).getLabel()));
+                    }
+
+                }
+
+                if (passingRight.isSelected()) {
+                    if (weakPassingRight.isSelected()) {
+                        wielopodmiotowe.add(allClassifiers.findClassifier("passing").createSet(allClassifiers.findClassifier("passing").getAffilation().get(0).getLabel()));
+                    }
+                    if (averagePassingRight.isSelected()) {
+                        wielopodmiotowe.add(allClassifiers.findClassifier("passing").createSet(allClassifiers.findClassifier("passing").getAffilation().get(1).getLabel()));
+                    }
+                    if (goodPassingRight.isSelected()) {
+                        wielopodmiotowe.add(allClassifiers.findClassifier("passing").createSet(allClassifiers.findClassifier("passing").getAffilation().get(2).getLabel()));
+                    }
+
+                }
+
+                if (dribblingRight.isSelected()) {
+                    if (weakDribblingRight.isSelected()) {
+                        wielopodmiotowe.add(allClassifiers.findClassifier("dribbling").createSet(allClassifiers.findClassifier("dribbling").getAffilation().get(0).getLabel()));
+                    }
+                    if (averageDribblingRight.isSelected()) {
+                        wielopodmiotowe.add(allClassifiers.findClassifier("dribbling").createSet(allClassifiers.findClassifier("dribbling").getAffilation().get(1).getLabel()));
+                    }
+                    if (goodDribblingRight.isSelected()) {
+                        wielopodmiotowe.add(allClassifiers.findClassifier("dribbling").createSet(allClassifiers.findClassifier("dribbling").getAffilation().get(2).getLabel()));
+                    }
+
+                }
+
+                if (defendingRight.isSelected()) {
+                    if (weakDefendingRight.isSelected()) {
+                        wielopodmiotowe.add(allClassifiers.findClassifier("defending").createSet(allClassifiers.findClassifier("defending").getAffilation().get(0).getLabel()));
+                    }
+                    if (averageDefendingRight.isSelected()) {
+                        wielopodmiotowe.add(allClassifiers.findClassifier("defending").createSet(allClassifiers.findClassifier("defending").getAffilation().get(1).getLabel()));
+                    }
+                    if (goodDefendingRight.isSelected()) {
+                        wielopodmiotowe.add(allClassifiers.findClassifier("defending").createSet(allClassifiers.findClassifier("defending").getAffilation().get(2).getLabel()));
+                    }
+
+                }
+
+                if (physicRight.isSelected()) {
+                    if (weakPhysicRight.isSelected()) {
+                        wielopodmiotowe.add(allClassifiers.findClassifier("physic").createSet(allClassifiers.findClassifier("physic").getAffilation().get(0).getLabel()));
+                    }
+                    if (averagePhysicRight.isSelected()) {
+                        wielopodmiotowe.add(allClassifiers.findClassifier("physic").createSet(allClassifiers.findClassifier("physic").getAffilation().get(1).getLabel()));
+                    }
+                    if (goodPhysicRight.isSelected()) {
+                        wielopodmiotowe.add(allClassifiers.findClassifier("physic").createSet(allClassifiers.findClassifier("physic").getAffilation().get(2).getLabel()));
+                    }
+                }
+
+
 
                     boolean isSum = true;
                     if (sumOr.getSelectedItem().equals("And"))
@@ -336,6 +512,18 @@ public class MyGui {
                     @Override
                     public void run() {
                         new ModifyCassifiers(allClassifiers, "age", leftAgeFeatures,rightAgeFeatures);
+                    }
+                });
+            }
+        });
+
+        modifyHeight.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                EventQueue.invokeLater(new Runnable() {
+                    @Override
+                    public void run() {
+                        new ModifyCassifiers(allClassifiers, "height", leftHeightFeatures,rightHeightFeatures);
                     }
                 });
             }
