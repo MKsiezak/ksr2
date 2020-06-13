@@ -19,7 +19,7 @@ public class FirstSummary {
 
     }
 
-    public static String generateSummary(List<FuzzySet> sets, Quantifier quantifier, int numberOfPlayers, boolean isSum, ClassifiersContainer allClassifiers) {
+    public static String generateSummary(List<FuzzySet> sets, Quantifier quantifier, int numberOfPlayers, boolean isSum, ClassifiersContainer allClassifiers, boolean fileSave) {
         FuzzySet result = sets.get(0);
         if (isSum == false) {
             for (int i = 1; i < sets.size(); i++) {
@@ -52,8 +52,8 @@ public class FirstSummary {
         }
         String quality;
         String quanti = quantifier.quantifies(result.getPlayersWithMembershipValue().size(),numberOfPlayers);
+        String summary = quantifier.quantifies(result ,numberOfPlayers, sets, allClassifiers, fileSave, features);
         quality =" [" + Double.toString(countQuality(result,quantifier,numberOfPlayers, allClassifiers, sets,quanti))+"]" ;
-        String summary = quanti + " of players have " + features+quality;
         return summary;
 
 
@@ -70,7 +70,8 @@ public class FirstSummary {
         t7 = T1.countT7(quantifier,quantifierValue,numberOfAllPlayers);
         t8 = T1.countT8(sets,allClassifiers);
         t9 = T1.countT9(result,numberOfAllPlayers,false);
-        t10 = T1.countT10(result,numberOfAllPlayers,false);
+        //t10 = T1.countT10(result,numberOfAllPlayers,false);
+        t10 = 1;
         t11 = T1.countT11();
 
 

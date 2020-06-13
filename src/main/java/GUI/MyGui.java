@@ -141,6 +141,7 @@ public class MyGui {
     private JCheckBox amazingOverallRight;
     private JPanel leftHeightFeatures;
     private JPanel rightHeightFeatures;
+    private JCheckBox toFile;
     private JScrollBar skrol;
 
     private List<FuzzySet> jednopodmiote;
@@ -478,20 +479,24 @@ public class MyGui {
                     if (sumOr.getSelectedItem().equals("And"))
                         isSum=false;
 
+                boolean saveToFile = false;
+                if (toFile.isSelected())
+                    saveToFile=true;
+
                     summaries.setText("");
 
                     if (jednolubwielo.getSelectedItem().equals("single subject summary")) {
                         String singleSummary = "";
                         if (wzgledny.isSelected())
-                            singleSummary = FirstSummary.generateSummary(jednopodmiote, allQuantifiers.getQuantifiers().get(0), numberOfAllPlayers, isSum, allClassifiers);
+                            singleSummary = FirstSummary.generateSummary(jednopodmiote, allQuantifiers.getQuantifiers().get(0), numberOfAllPlayers, isSum, allClassifiers,saveToFile);
                         else
-                            singleSummary = FirstSummary.generateSummary(jednopodmiote, allQuantifiers.getQuantifiers().get(1), numberOfAllPlayers, isSum, allClassifiers);
+                            singleSummary = FirstSummary.generateSummary(jednopodmiote, allQuantifiers.getQuantifiers().get(1), numberOfAllPlayers, isSum, allClassifiers,saveToFile);
                         summaries.setText(singleSummary + "\n");
                         //summaries.setText(summaries.getText() +"\n"+  singleSummary);
                     }
                     else{
                         List<String> multiSummary;
-                        multiSummary = SecondSummary.generateSummary(jednopodmiote, wielopodmiotowe, allQuantifiers.getQuantifiers().get(0), numberOfAllPlayers, allClassifiers);
+                        multiSummary = SecondSummary.generateSummary(jednopodmiote, wielopodmiotowe, allQuantifiers.getQuantifiers().get(0), numberOfAllPlayers, allClassifiers,saveToFile);
                         for (int z=0; z<multiSummary.size();z++) {
                             summaries.setText(summaries.getText() + "\n" + multiSummary.get(z));
                         }

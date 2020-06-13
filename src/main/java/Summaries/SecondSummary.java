@@ -1,6 +1,7 @@
 package Summaries;
 
 import Classifiers.ClassifiersContainer;
+import QualityMeasures.T1;
 import Quantifiers.Quantifier;
 import Sets.FuzzySet;
 
@@ -9,20 +10,21 @@ import java.util.List;
 
 public class SecondSummary {
 
-    public static List<String> generateSummary(List<FuzzySet> left, List<FuzzySet> right, Quantifier quantifier, int numberOfPlayers, ClassifiersContainer allClassifiers){
+    public static List<String> generateSummary(List<FuzzySet> left, List<FuzzySet> right, Quantifier quantifier, int numberOfPlayers, ClassifiersContainer allClassifiers, boolean fileSave){
 
         //FuzzySet zbior = allClassifiers.findClassifier(featureName).createSet(labelName);
         //int numberOfPlayers = zbior.getPlayersWithMembershipValue().size();
         FuzzySet wypadkowy;
-        String quanti;
+        String summary,quality;
         List<String> summaries = new ArrayList<String>();
+
         for ( int i=0; i< right.size(); i++)
         {
             for ( int k=0; k < left.size();k++)
             {
                 wypadkowy = right.get(i).intersectionFuzzySetsWithoutZero(left.get(k));
-                quanti = quantifier.quantifies(wypadkowy.getPlayersWithMembershipValue().size(),right.get(i).supp().size());
-                summaries.add(quanti+ " of " +right.get(i).getLabelName() + " " + right.get(i).getFeatureName()+ " players have "+ left.get(k).getLabelName() + " " + left.get(k).getFeatureName());
+                summary = quantifier.quantifiesForSecond(wypadkowy, numberOfPlayers,allClassifiers,fileSave,left.get(k), right.get(i)  );
+                summaries.add(summary);
 
 
             }
@@ -39,4 +41,5 @@ public class SecondSummary {
 
 
     }
+
 }

@@ -23,8 +23,25 @@ public class T1 {
         degreeOfTruth = quantifier.quantifiesValue((int) r, m);
         return degreeOfTruth;
 
+    }
+
+    public static double countT1new(FuzzySet result, Quantifier quantifier, int m, AffilationFunction affilationFunction) {
+        double r = 0;
+        double degreeOfTruth;
+
+        for (int i = 0; i < result.getPlayersWithMembershipValue().size(); i++) {
+            r += 1;
+
+        }
+        if(quantifier.getType().equals("wzgledny")) {
+            degreeOfTruth = affilationFunction.countMembership(r / (double) m);
+        }
+        else
+            degreeOfTruth = affilationFunction.countMembership(r);
+        return degreeOfTruth;
 
     }
+
 
     public static double countT2First(List<FuzzySet> sets, ClassifiersContainer classifiers) {
 
@@ -44,6 +61,7 @@ public class T1 {
         degree = 1 - Math.pow(product, 1.0 / sets.size());
         return degree;
     }
+
 
 
     public static double countT3(FuzzySet result, int numberOfAllPlayers) {
@@ -95,11 +113,14 @@ public class T1 {
         try {
             AffilationFunction afilation = quantifier.findAffilation(quantifierValue);
             double space;
+            double first =afilation.getFirst();
+            if (first<0)
+                first=0;
             if (quantifier.getType().equals("wzgledny"))
                 space=1;
             else
                 space=numberOfPlayers;
-            double in = (afilation.getLast() - afilation.getFirst())/space;
+            double in = (afilation.getLast() - first)/space;
 
             return 1.0-in;
 
@@ -115,19 +136,27 @@ public class T1 {
     public static double countT6(Quantifier quantifier, String quantifierValue, int numberOfPlayers) {
         try {
             AffilationFunction afilation = quantifier.findAffilation(quantifierValue);
-            double space;
-            if (quantifier.getType().equals("wzgledny"))
+            double space, in;
+            double first = afilation.getFirst();
+            if (quantifier.getType().equals("wzgledny")) {
                 space = 1.0;
-            else
+                if (first < 0)
+                    first = 0;
+                in = (afilation.getLast() - first) / space;
+            }
+            else {
                 space = numberOfPlayers;
-            double in = (afilation.getLast() - afilation.getFirst()) / space;
+                if (first < 0)
+                    first = 0;
+                in = (afilation.getLast() - afilation.getFirst() - 2) / space;
+            }
 
             return 1.0 - in;
 
 
         } catch (Exception e) {
             System.out.println(e);
-            System.out.println("blad przy t7");
+            System.out.println("blad przy t6");
             return -1;
         }
 
@@ -140,7 +169,7 @@ public class T1 {
 
     public static double countT9(FuzzySet w, int numberOfPlayers, boolean isComplex) {
 
-        if( isComplex){
+        if( isComplex == false){
             return 1.0;
         }
         else{
@@ -149,9 +178,21 @@ public class T1 {
         }
     }
 
-    public static double countT10(FuzzySet w, int numberOfPlayers, boolean isComplex) {
+    public static double countT10(FuzzySet w, int numberOfPlayers, boolean isComplex, AffilationFunction affilation, Quantifier quantifier) {
 
-       return countT9(w,numberOfPlayers,isComplex);
+        if( isComplex == false){
+            return 1.0;
+        }
+        else{
+            double space;
+            if (quantifier.getType().equals("wzgledny"))
+                space=1;
+            else
+                space=numberOfPlayers;
+            double in = (affilation.getLast() - affilation.getFirst())/space;
+
+            return 1.0-in;
+        }
     }
 
     public static double countT11() {
