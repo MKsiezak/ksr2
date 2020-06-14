@@ -102,7 +102,7 @@ public class Quantifier {
                 t11 = T1.countT11();
 
                 quality =" [" + Double.toString((t1+t2+t3+t4+t5+t6+t7+t8+t9+t10+t11)/11.0)+"]";
-                avg.add((0.8*t1+.2*t2+.2*t3+.2*t4+.2*t5+.2*t6+.2*t7+.2*t8+.2*t9+.2*t10+.2*t11)/11.0);
+                avg.add((t1+t2+t3+t4+t5+t6+t7+t8+t9+t10+t11)/11.0);
                 values.add(t1 + " " + t2+ " " + t3+ " " + t4+ " " + t5+ " " + t6+ " " + t7+ " " + t8+ " "+ t9+ " " + t10+ " " + t11);
                 summary = affilation.get(i).getLabel() + " of players have " + features+ quality;
                 summaries.add(summary);
@@ -144,9 +144,9 @@ public class Quantifier {
 
     }
 
-
-
-
+    public List<AffilationFunction> getAffilation() {
+        return affilation;
+    }
 
     //do wartosci funkcji przynaleznosci
     public double quantifiesValue(int numberOfPlayersInGroup, int allPlayers) {
@@ -201,7 +201,7 @@ public class Quantifier {
             t11 = T1.countT11();
 
             quality =" [" + Double.toString((t1+t2+t3+t4+t5+t6+t7+t8+t9+t10+t11)/11.0)+"]";
-            avg.add((0.8*t1+.2*t2+.2*t3+.2*t4+.2*t5+.2*t6+.2*t7+.2*t8+.2*t9+.2*t10+.2*t11)/11.0);
+            avg.add((t1+t2+t3+t4+t5+t6+t7+t8+t9+t10+t11)/11.0);
             values.add(t1 + " " + t2+ " " + t3+ " " + t4+ " " + t5+ " " + t6+ " " + t7+ " " + t8+ " "+ t9+ " " + t10+ " " + t11);
             summary = affilation.get(i).getLabel() +  " of " +qualifier.getLabelName() + " " + qualifier.getFeatureName()+ " players have "+ left.getLabelName() + " " + left.getFeatureName()+ quality;
             summaries.add(summary);

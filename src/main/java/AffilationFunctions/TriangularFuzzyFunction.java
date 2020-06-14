@@ -34,6 +34,11 @@ public class TriangularFuzzyFunction implements AffilationFunction {
         return c;
     }
 
+    @Override
+    public double getD() {
+        return -1;
+    }
+
     public void setC(double c) {
         this.c = c;
     }

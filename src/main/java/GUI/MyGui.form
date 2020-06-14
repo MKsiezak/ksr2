@@ -50,7 +50,7 @@
                       </component>
                     </children>
                   </grid>
-                  <grid id="3438d" layout-manager="GridLayoutManager" row-count="4" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                  <grid id="3438d" binding="leftShootingFeatures" layout-manager="GridLayoutManager" row-count="4" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
                     <margin top="0" left="0" bottom="0" right="0"/>
                     <constraints>
                       <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
@@ -66,11 +66,6 @@
                           <text value="weak"/>
                         </properties>
                       </component>
-                      <vspacer id="802cf">
-                        <constraints>
-                          <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
-                        </constraints>
-                      </vspacer>
                       <component id="70fb7" class="javax.swing.JCheckBox" binding="averageShooting">
                         <constraints>
                           <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
@@ -85,6 +80,15 @@
                         </constraints>
                         <properties>
                           <text value="good"/>
+                        </properties>
+                      </component>
+                      <component id="4b228" class="javax.swing.JCheckBox" binding="newShooting">
+                        <constraints>
+                          <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <selected value="false"/>
+                          <text value=""/>
                         </properties>
                       </component>
                     </children>
@@ -130,7 +134,7 @@
                       </component>
                     </children>
                   </grid>
-                  <grid id="703f9" layout-manager="GridLayoutManager" row-count="4" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                  <grid id="703f9" binding="leftPassingFeatures" layout-manager="GridLayoutManager" row-count="4" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
                     <margin top="0" left="0" bottom="0" right="0"/>
                     <constraints>
                       <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
@@ -146,11 +150,6 @@
                           <text value="weak"/>
                         </properties>
                       </component>
-                      <vspacer id="ce954">
-                        <constraints>
-                          <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
-                        </constraints>
-                      </vspacer>
                       <component id="5afa3" class="javax.swing.JCheckBox" binding="averagePassing">
                         <constraints>
                           <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
@@ -165,6 +164,15 @@
                         </constraints>
                         <properties>
                           <text value="good"/>
+                        </properties>
+                      </component>
+                      <component id="829f1" class="javax.swing.JCheckBox" binding="newPassing">
+                        <constraints>
+                          <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <selected value="false"/>
+                          <text value=""/>
                         </properties>
                       </component>
                     </children>
@@ -205,7 +213,7 @@
                       </component>
                     </children>
                   </grid>
-                  <grid id="a0875" layout-manager="GridLayoutManager" row-count="4" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                  <grid id="a0875" binding="leftDribblingFeatures" layout-manager="GridLayoutManager" row-count="4" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
                     <margin top="0" left="0" bottom="0" right="0"/>
                     <constraints>
                       <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
@@ -221,11 +229,6 @@
                           <text value="weak"/>
                         </properties>
                       </component>
-                      <vspacer id="6809d">
-                        <constraints>
-                          <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
-                        </constraints>
-                      </vspacer>
                       <component id="fcd3e" class="javax.swing.JCheckBox" binding="averageDribbling">
                         <constraints>
                           <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
@@ -240,6 +243,15 @@
                         </constraints>
                         <properties>
                           <text value="good"/>
+                        </properties>
+                      </component>
+                      <component id="c0f78" class="javax.swing.JCheckBox" binding="newDribbling">
+                        <constraints>
+                          <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <selected value="false"/>
+                          <text value=""/>
                         </properties>
                       </component>
                     </children>
@@ -280,7 +292,7 @@
                       </component>
                     </children>
                   </grid>
-                  <grid id="5c2ff" layout-manager="GridLayoutManager" row-count="4" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                  <grid id="5c2ff" binding="leftDeffendingFeatures" layout-manager="GridLayoutManager" row-count="4" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
                     <margin top="0" left="0" bottom="0" right="0"/>
                     <constraints>
                       <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
@@ -296,11 +308,6 @@
                           <text value="weak"/>
                         </properties>
                       </component>
-                      <vspacer id="2181c">
-                        <constraints>
-                          <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
-                        </constraints>
-                      </vspacer>
                       <component id="13b83" class="javax.swing.JCheckBox" binding="averageDefending">
                         <constraints>
                           <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
@@ -315,6 +322,15 @@
                         </constraints>
                         <properties>
                           <text value="good"/>
+                        </properties>
+                      </component>
+                      <component id="57837" class="javax.swing.JCheckBox" binding="newDefending">
+                        <constraints>
+                          <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <selected value="false"/>
+                          <text value=""/>
                         </properties>
                       </component>
                     </children>
@@ -355,7 +371,7 @@
                       </component>
                     </children>
                   </grid>
-                  <grid id="1e367" layout-manager="GridLayoutManager" row-count="4" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                  <grid id="1e367" binding="leftPhysicFeatures" layout-manager="GridLayoutManager" row-count="4" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
                     <margin top="0" left="0" bottom="0" right="0"/>
                     <constraints>
                       <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
@@ -371,11 +387,6 @@
                           <text value="weak"/>
                         </properties>
                       </component>
-                      <vspacer id="daad1">
-                        <constraints>
-                          <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
-                        </constraints>
-                      </vspacer>
                       <component id="c955b" class="javax.swing.JCheckBox" binding="averagePhysic">
                         <constraints>
                           <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
@@ -390,6 +401,15 @@
                         </constraints>
                         <properties>
                           <text value="good"/>
+                        </properties>
+                      </component>
+                      <component id="1a4f9" class="javax.swing.JCheckBox" binding="newPhysic">
+                        <constraints>
+                          <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <selected value="false"/>
+                          <text value=""/>
                         </properties>
                       </component>
                     </children>
@@ -456,11 +476,6 @@
                           <text value="young"/>
                         </properties>
                       </component>
-                      <vspacer id="263d4">
-                        <constraints>
-                          <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
-                        </constraints>
-                      </vspacer>
                       <component id="1d2e9" class="javax.swing.JCheckBox" binding="middle">
                         <constraints>
                           <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
@@ -475,6 +490,15 @@
                         </constraints>
                         <properties>
                           <text value="old"/>
+                        </properties>
+                      </component>
+                      <component id="2c7be" class="javax.swing.JCheckBox" binding="newAge">
+                        <constraints>
+                          <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <selected value="false"/>
+                          <text value=""/>
                         </properties>
                       </component>
                     </children>
@@ -520,7 +544,7 @@
                       </component>
                     </children>
                   </grid>
-                  <grid id="e335" layout-manager="GridLayoutManager" row-count="4" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                  <grid id="e335" binding="leftOverallFeatures" layout-manager="GridLayoutManager" row-count="5" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
                     <margin top="0" left="0" bottom="0" right="0"/>
                     <constraints>
                       <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
@@ -558,6 +582,15 @@
                         </constraints>
                         <properties>
                           <text value="amazing"/>
+                        </properties>
+                      </component>
+                      <component id="2d537" class="javax.swing.JCheckBox" binding="newOverall">
+                        <constraints>
+                          <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <selected value="false"/>
+                          <text value=""/>
                         </properties>
                       </component>
                     </children>
@@ -598,7 +631,7 @@
                       </component>
                     </children>
                   </grid>
-                  <grid id="af020" layout-manager="GridLayoutManager" row-count="4" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                  <grid id="af020" binding="leftValueFeatures" layout-manager="GridLayoutManager" row-count="4" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
                     <margin top="0" left="0" bottom="0" right="0"/>
                     <constraints>
                       <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
@@ -614,11 +647,6 @@
                           <text value="cheap"/>
                         </properties>
                       </component>
-                      <vspacer id="2889d">
-                        <constraints>
-                          <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
-                        </constraints>
-                      </vspacer>
                       <component id="468ba" class="javax.swing.JCheckBox" binding="moderate">
                         <constraints>
                           <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
@@ -633,6 +661,15 @@
                         </constraints>
                         <properties>
                           <text value="high"/>
+                        </properties>
+                      </component>
+                      <component id="9ffd8" class="javax.swing.JCheckBox" binding="newValue">
+                        <constraints>
+                          <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <selected value="false"/>
+                          <text value=""/>
                         </properties>
                       </component>
                     </children>
@@ -673,7 +710,7 @@
                       </component>
                     </children>
                   </grid>
-                  <grid id="781e" layout-manager="GridLayoutManager" row-count="4" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                  <grid id="781e" binding="leftPaceFeatures" layout-manager="GridLayoutManager" row-count="4" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
                     <margin top="0" left="0" bottom="0" right="0"/>
                     <constraints>
                       <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
@@ -689,11 +726,6 @@
                           <text value="weak"/>
                         </properties>
                       </component>
-                      <vspacer id="329f6">
-                        <constraints>
-                          <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
-                        </constraints>
-                      </vspacer>
                       <component id="26c2e" class="javax.swing.JCheckBox" binding="paceAverage">
                         <constraints>
                           <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
@@ -708,6 +740,15 @@
                         </constraints>
                         <properties>
                           <text value="good"/>
+                        </properties>
+                      </component>
+                      <component id="9dfc" class="javax.swing.JCheckBox" binding="newPace">
+                        <constraints>
+                          <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <selected value="false"/>
+                          <text value=""/>
                         </properties>
                       </component>
                     </children>
@@ -748,7 +789,7 @@
                       </component>
                     </children>
                   </grid>
-                  <grid id="9fb8b" layout-manager="GridLayoutManager" row-count="5" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                  <grid id="9fb8b" binding="leftWeightFeature" layout-manager="GridLayoutManager" row-count="5" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
                     <margin top="0" left="0" bottom="0" right="0"/>
                     <constraints>
                       <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
@@ -764,11 +805,6 @@
                           <text value="low"/>
                         </properties>
                       </component>
-                      <vspacer id="68e6f">
-                        <constraints>
-                          <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
-                        </constraints>
-                      </vspacer>
                       <component id="8e18f" class="javax.swing.JCheckBox" binding="average">
                         <constraints>
                           <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
@@ -791,6 +827,15 @@
                         </constraints>
                         <properties>
                           <text value="obese"/>
+                        </properties>
+                      </component>
+                      <component id="a1d20" class="javax.swing.JCheckBox" binding="newWeight">
+                        <constraints>
+                          <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <selected value="false"/>
+                          <text value=""/>
                         </properties>
                       </component>
                     </children>
@@ -847,11 +892,6 @@
                           <text value="short"/>
                         </properties>
                       </component>
-                      <vspacer id="4952e">
-                        <constraints>
-                          <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
-                        </constraints>
-                      </vspacer>
                       <component id="75685" class="javax.swing.JCheckBox" binding="medium">
                         <constraints>
                           <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
@@ -866,6 +906,15 @@
                         </constraints>
                         <properties>
                           <text value="tall"/>
+                        </properties>
+                      </component>
+                      <component id="52189" class="javax.swing.JCheckBox" binding="newHeight">
+                        <constraints>
+                          <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <selected value="false"/>
+                          <text value=""/>
                         </properties>
                       </component>
                     </children>
@@ -963,7 +1012,7 @@
                           </component>
                         </children>
                       </grid>
-                      <grid id="4ecf7" layout-manager="GridLayoutManager" row-count="4" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                      <grid id="4ecf7" binding="rightShootingFeatures" layout-manager="GridLayoutManager" row-count="4" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
                         <margin top="0" left="0" bottom="0" right="0"/>
                         <constraints>
                           <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
@@ -979,11 +1028,6 @@
                               <text value="weak"/>
                             </properties>
                           </component>
-                          <vspacer id="defe8">
-                            <constraints>
-                              <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
-                            </constraints>
-                          </vspacer>
                           <component id="8309d" class="javax.swing.JCheckBox" binding="averageShootingRight">
                             <constraints>
                               <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
@@ -998,6 +1042,15 @@
                             </constraints>
                             <properties>
                               <text value="good"/>
+                            </properties>
+                          </component>
+                          <component id="fbd19" class="javax.swing.JCheckBox" binding="newShootingRight">
+                            <constraints>
+                              <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <selected value="false"/>
+                              <text value=""/>
                             </properties>
                           </component>
                         </children>
@@ -1035,7 +1088,7 @@
                           </component>
                         </children>
                       </grid>
-                      <grid id="56926" layout-manager="GridLayoutManager" row-count="4" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                      <grid id="56926" binding="rightPassingFeatures" layout-manager="GridLayoutManager" row-count="4" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
                         <margin top="0" left="0" bottom="0" right="0"/>
                         <constraints>
                           <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
@@ -1051,11 +1104,6 @@
                               <text value="weak"/>
                             </properties>
                           </component>
-                          <vspacer id="b9504">
-                            <constraints>
-                              <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
-                            </constraints>
-                          </vspacer>
                           <component id="cbb91" class="javax.swing.JCheckBox" binding="averagePassingRight">
                             <constraints>
                               <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
@@ -1070,6 +1118,15 @@
                             </constraints>
                             <properties>
                               <text value="good"/>
+                            </properties>
+                          </component>
+                          <component id="842a3" class="javax.swing.JCheckBox" binding="newPassingRight">
+                            <constraints>
+                              <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <selected value="false"/>
+                              <text value=""/>
                             </properties>
                           </component>
                         </children>
@@ -1102,7 +1159,7 @@
                           </component>
                         </children>
                       </grid>
-                      <grid id="177a3" layout-manager="GridLayoutManager" row-count="4" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                      <grid id="177a3" binding="rightDribblingFeatures" layout-manager="GridLayoutManager" row-count="4" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
                         <margin top="0" left="0" bottom="0" right="0"/>
                         <constraints>
                           <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
@@ -1118,11 +1175,6 @@
                               <text value="weak"/>
                             </properties>
                           </component>
-                          <vspacer id="3bed3">
-                            <constraints>
-                              <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
-                            </constraints>
-                          </vspacer>
                           <component id="7989" class="javax.swing.JCheckBox" binding="averageDribblingRight">
                             <constraints>
                               <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
@@ -1137,6 +1189,15 @@
                             </constraints>
                             <properties>
                               <text value="good"/>
+                            </properties>
+                          </component>
+                          <component id="8475" class="javax.swing.JCheckBox" binding="newDribblingRight">
+                            <constraints>
+                              <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <selected value="false"/>
+                              <text value=""/>
                             </properties>
                           </component>
                         </children>
@@ -1169,7 +1230,7 @@
                           </component>
                         </children>
                       </grid>
-                      <grid id="9553e" layout-manager="GridLayoutManager" row-count="4" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                      <grid id="9553e" binding="rightDefendingFeatures" layout-manager="GridLayoutManager" row-count="4" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
                         <margin top="0" left="0" bottom="0" right="0"/>
                         <constraints>
                           <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
@@ -1185,11 +1246,6 @@
                               <text value="weak"/>
                             </properties>
                           </component>
-                          <vspacer id="a2395">
-                            <constraints>
-                              <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
-                            </constraints>
-                          </vspacer>
                           <component id="c2174" class="javax.swing.JCheckBox" binding="averageDefendingRight">
                             <constraints>
                               <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
@@ -1204,6 +1260,15 @@
                             </constraints>
                             <properties>
                               <text value="good"/>
+                            </properties>
+                          </component>
+                          <component id="ddba2" class="javax.swing.JCheckBox" binding="newDefendingRight">
+                            <constraints>
+                              <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <selected value="false"/>
+                              <text value=""/>
                             </properties>
                           </component>
                         </children>
@@ -1236,7 +1301,7 @@
                           </component>
                         </children>
                       </grid>
-                      <grid id="b689b" layout-manager="GridLayoutManager" row-count="4" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                      <grid id="b689b" binding="rightPhysicFeatures" layout-manager="GridLayoutManager" row-count="4" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
                         <margin top="0" left="0" bottom="0" right="0"/>
                         <constraints>
                           <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
@@ -1252,11 +1317,6 @@
                               <text value="weak"/>
                             </properties>
                           </component>
-                          <vspacer id="2e9f3">
-                            <constraints>
-                              <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
-                            </constraints>
-                          </vspacer>
                           <component id="57329" class="javax.swing.JCheckBox" binding="averagePhysicRight">
                             <constraints>
                               <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
@@ -1271,6 +1331,15 @@
                             </constraints>
                             <properties>
                               <text value="good"/>
+                            </properties>
+                          </component>
+                          <component id="fe6a0" class="javax.swing.JCheckBox" binding="newPhysicRight">
+                            <constraints>
+                              <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <selected value="false"/>
+                              <text value=""/>
                             </properties>
                           </component>
                         </children>
@@ -1329,11 +1398,6 @@
                               <text value="young"/>
                             </properties>
                           </component>
-                          <vspacer id="2747d">
-                            <constraints>
-                              <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
-                            </constraints>
-                          </vspacer>
                           <component id="55bc" class="javax.swing.JCheckBox" binding="middleRight">
                             <constraints>
                               <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
@@ -1348,6 +1412,14 @@
                             </constraints>
                             <properties>
                               <text value="old"/>
+                            </properties>
+                          </component>
+                          <component id="73890" class="javax.swing.JCheckBox" binding="newAgeRight">
+                            <constraints>
+                              <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <text value=""/>
                             </properties>
                           </component>
                         </children>
@@ -1385,7 +1457,7 @@
                           </component>
                         </children>
                       </grid>
-                      <grid id="acb60" layout-manager="GridLayoutManager" row-count="4" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                      <grid id="acb60" binding="rightOverallFeatures" layout-manager="GridLayoutManager" row-count="5" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
                         <margin top="0" left="0" bottom="0" right="0"/>
                         <constraints>
                           <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
@@ -1425,6 +1497,15 @@
                               <text value="amazing"/>
                             </properties>
                           </component>
+                          <component id="fa860" class="javax.swing.JCheckBox" binding="newOverallRight">
+                            <constraints>
+                              <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <selected value="false"/>
+                              <text value=""/>
+                            </properties>
+                          </component>
                         </children>
                       </grid>
                     </children>
@@ -1455,7 +1536,7 @@
                           </component>
                         </children>
                       </grid>
-                      <grid id="c73b9" layout-manager="GridLayoutManager" row-count="4" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                      <grid id="c73b9" binding="rightValueFeatures" layout-manager="GridLayoutManager" row-count="4" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
                         <margin top="0" left="0" bottom="0" right="0"/>
                         <constraints>
                           <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
@@ -1471,11 +1552,6 @@
                               <text value="cheap"/>
                             </properties>
                           </component>
-                          <vspacer id="7bd0">
-                            <constraints>
-                              <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
-                            </constraints>
-                          </vspacer>
                           <component id="20324" class="javax.swing.JCheckBox" binding="moderateRight">
                             <constraints>
                               <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
@@ -1490,6 +1566,15 @@
                             </constraints>
                             <properties>
                               <text value="high"/>
+                            </properties>
+                          </component>
+                          <component id="e0976" class="javax.swing.JCheckBox" binding="newValueRight">
+                            <constraints>
+                              <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <selected value="false"/>
+                              <text value=""/>
                             </properties>
                           </component>
                         </children>
@@ -1522,7 +1607,7 @@
                           </component>
                         </children>
                       </grid>
-                      <grid id="4f155" layout-manager="GridLayoutManager" row-count="4" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                      <grid id="4f155" binding="rightPaceFeatures" layout-manager="GridLayoutManager" row-count="4" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
                         <margin top="0" left="0" bottom="0" right="0"/>
                         <constraints>
                           <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
@@ -1538,11 +1623,6 @@
                               <text value="weak"/>
                             </properties>
                           </component>
-                          <vspacer id="5cd7a">
-                            <constraints>
-                              <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
-                            </constraints>
-                          </vspacer>
                           <component id="b42d5" class="javax.swing.JCheckBox" binding="averagePaceRight">
                             <constraints>
                               <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
@@ -1557,6 +1637,15 @@
                             </constraints>
                             <properties>
                               <text value="good"/>
+                            </properties>
+                          </component>
+                          <component id="68dda" class="javax.swing.JCheckBox" binding="newPaceRight">
+                            <constraints>
+                              <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <selected value="false"/>
+                              <text value=""/>
                             </properties>
                           </component>
                         </children>
@@ -1589,7 +1678,7 @@
                           </component>
                         </children>
                       </grid>
-                      <grid id="3d60b" layout-manager="GridLayoutManager" row-count="4" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                      <grid id="3d60b" binding="rightWeightFeatures" layout-manager="GridLayoutManager" row-count="5" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
                         <margin top="0" left="0" bottom="0" right="0"/>
                         <constraints>
                           <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
@@ -1627,6 +1716,15 @@
                             </constraints>
                             <properties>
                               <text value="obese"/>
+                            </properties>
+                          </component>
+                          <component id="8f418" class="javax.swing.JCheckBox" binding="newWeightRight">
+                            <constraints>
+                              <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <selected value="false"/>
+                              <text value=""/>
                             </properties>
                           </component>
                         </children>
@@ -1675,11 +1773,6 @@
                               <text value="short"/>
                             </properties>
                           </component>
-                          <vspacer id="e80f2">
-                            <constraints>
-                              <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
-                            </constraints>
-                          </vspacer>
                           <component id="85c06" class="javax.swing.JCheckBox" binding="mediumRight">
                             <constraints>
                               <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
@@ -1694,6 +1787,15 @@
                             </constraints>
                             <properties>
                               <text value="tall"/>
+                            </properties>
+                          </component>
+                          <component id="412d3" class="javax.swing.JCheckBox" binding="newHeightRight">
+                            <constraints>
+                              <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <selected value="false"/>
+                              <text value=""/>
                             </properties>
                           </component>
                         </children>

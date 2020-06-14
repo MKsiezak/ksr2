@@ -26,4 +26,24 @@ public class ClassicFunction implements AffilationFunction {
     public double getLast() {
         return 0;
     }
+
+    @Override
+    public double getA() {
+        return 0;
+    }
+
+    @Override
+    public double getB() {
+        return 0;
+    }
+
+    @Override
+    public double getC() {
+        return 0;
+    }
+
+    @Override
+    public double getD() {
+        return 0;
+    }
 }

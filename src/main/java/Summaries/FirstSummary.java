@@ -51,9 +51,8 @@ public class FirstSummary {
             }
         }
         String quality;
-        String quanti = quantifier.quantifies(result.getPlayersWithMembershipValue().size(),numberOfPlayers);
+        //String quanti = quantifier.quantifies(result.getPlayersWithMembershipValue().size(),numberOfPlayers);
         String summary = quantifier.quantifies(result ,numberOfPlayers, sets, allClassifiers, fileSave, features);
-        quality =" [" + Double.toString(countQuality(result,quantifier,numberOfPlayers, allClassifiers, sets,quanti))+"]" ;
         return summary;
 
 

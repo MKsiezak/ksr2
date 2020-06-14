@@ -14,4 +14,13 @@ public interface AffilationFunction {
 
     //bierze c lub d
     double getLast();
+
+    double getA();
+
+    double getB();
+
+    double getC();
+
+    double getD();
+
 }
